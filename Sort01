@@ -1,0 +1,22 @@
+public class Solution {  
+
+    public static void sortZeroesAndOne(int[] arr) {
+    	//Your code goes here
+      int temp=0;
+      int zeroLocation=0;
+      int i=0;
+      while(i<arr.length){
+          if(arr[i]==1){
+              i++;
+          }
+          else{
+              temp=arr[i];
+              arr[i]=arr[zeroLocation];
+              arr[zeroLocation]=temp;
+              i++;
+              zeroLocation++;
+          }
+      }
+    
+    }
+}
